@@ -56,3 +56,41 @@ const tree = {
         }
     ]
 }
+
+
+function sumRange(n, total = 0) {
+    if (n <= 0) {
+        return total
+    }
+    return sumRange(n-1, total + n)
+}
+
+console.log(sumRange(5))
+
+function power(b, e) {
+    if (e === 0) {
+        return 1;
+    }
+    return b ** e
+}
+
+console.log(power(3, 3))
+console.log(power(3, 0))
+
+function factorial(n, total = 1) {
+    if (n <= 1) {
+        return total
+    }
+    return factorial(n-1, total * n)
+}
+console.log(factorial(5))
+
+function factorial(n) {
+    total = 1
+    for (let i = n; i > 1; i--) {
+        total *= i
+    }
+    return total
+}
+
+console.log(factorial(5))
